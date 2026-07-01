@@ -1,0 +1,116 @@
+
+.booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.booking-form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.doctor-details {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.doctor-details h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.date-time-pickers {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ant-picker {
+  width: 100%;
+  max-width: 240px;
+}
+
+.booking-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.check-availability {
+  background-color: #007bff;
+  color: white;
+}
+
+.check-availability:hover {
+  background-color: #0056b3;
+}
+
+.booking-button {
+  color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .date-time-pickers {
+    flex-direction: column;
+  }
+
+  .ant-picker {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .booking-form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-form {
+    padding: 10px;
+  }
+
+  .booking-header {
+    font-size: 20px;
+  }
+
+  .doctor-details h4 {
+    font-size: 14px;
+  }
+
+  .ant-picker {
+    font-size: 14px;
+  }
+
+  .booking-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

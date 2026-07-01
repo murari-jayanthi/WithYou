@@ -1,0 +1,333 @@
+/* Main structure for the layout */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: lightblue; 
+}
+
+.layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 0, 0, 0.664);
+  padding: 35px;
+  color: white;
+  height: 55px;
+  flex-wrap: nowrap;
+}
+ .navbar h6 {
+  font-family: "Algeria"; 
+  font-size: 24px; 
+  font-weight: 500; 
+  letter-spacing: 1px; 
+  line-height: 1.2; 
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase; 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-image {
+  height: 50px;
+  width: 50px;
+}
+.menux {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.menu-item {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: rgb(255, 0, 0);
+  height: 70px;
+
+}
+
+.menu-item.active {
+  background-color: lightblue;
+  color: #333;
+  padding-bottom: 5%;
+}
+
+.header-content {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+/* Bell and username styles */
+.bell-large {
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  transition: font-size 0.3s ease; 
+}
+
+.user-name-large {
+  padding-left: 10px;
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  transition: font-size 0.3s ease; 
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; 
+  min-height: 0; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px;
+    height: 57px;
+  }
+
+  .menu {
+    margin-left: 10px;
+  }
+
+  .menu-item {
+    width: 100px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .menu-item.active {
+    padding-bottom: 8%;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  /* Adjust bell and username for smaller screens */
+  .bell-large {
+    font-size: 1.3rem;
+  }
+
+  .user-name-large {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px;
+    height: 50px;
+  }
+
+  .menu-item {
+    width: 90px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  /* Further adjustment for bell and username */
+  .bell-large {
+    font-size: 1.2rem;
+  }
+
+  .user-name-large {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu-item {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu-item.active {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .header-content {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Further reduce bell and username size for small screens */
+  .bell-large {
+    font-size: 1.1rem;
+    align-content: center;
+  }
+
+  .user-name-large {
+    font-size: 1.1rem;
+    padding-left: 5px;
+    align-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+    height: auto;
+  }
+
+  .logo-image {
+    height: 40px;
+    width: 40px;
+  }
+
+  .menu-item {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .header-content {
+    margin-top: 5px;
+  }
+
+  .content {
+    padding: 5px;
+  }
+
+  /* Smallest size for bell and username on mobile */
+  .bell-large {
+    font-size: 1rem;
+    align-content: center;
+  }
+
+  .user-name-large {
+    font-size: 1rem;
+    align-content: center;
+  }
+}
+@media (min-width: 600px) {
+  .menu-item {
+    width: 120px; /* Increase the width for screens larger than 600px */
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-item {
+    width: 150px; /* Further increase the width for screens larger than 768px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-item {
+    width: 180px; /* Even further increase for screens larger than 1024px */
+  }
+}
+
+
+
+.about-page {
+  padding: 20px;
+}
+
+.about-page h1 {
+  margin-bottom: 20px;
+}
+
+.about-page h2 {
+  margin-top: 20px;
+}
+
+.about-page p {
+  margin-bottom: 15px;
+}
+.about-form {
+  border: 1px solid #ccc; /* Border color */
+  padding: 20px;          /* Padding inside the form */
+  margin: 20px auto;     /* Margin around the form */
+  max-width: 600px;      /* Maximum width of the form */
+  border-radius: 5px;    /* Rounded corners */
+  background-color: #f9f9f9; /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+  font-weight: bold; /* Bold label text */
+  display: block;    /* Make label block-level */
+  margin-bottom: 10px; /* Space between label and textarea */
+}
+
+.form-control {
+  width: 100%;       /* Full width for textarea */
+  border: 1px solid #ccc; /* Border for textarea */
+  border-radius: 4px; /* Rounded corners for textarea */
+  padding: 10px;     /* Padding inside textarea */
+  resize: none;      /* Disable resizing */
+  background-color: #fff; /* Background color for textarea */
+}
+.centered-message {
+  text-align: center;
+  margin-top: 10px; /* Adjust margin as needed */
+}
